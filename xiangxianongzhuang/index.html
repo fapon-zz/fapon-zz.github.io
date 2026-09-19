@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乡下农庄 - 生态农产直供与乡村休闲度假指南</title>
+    <meta name="description" content="乡下农庄为您提供最新鲜的有机蔬菜、散养禽蛋及优质农副产品。同时详细介绍乡村民宿、亲子采摘、农耕体验等休闲旅游项目，是您回归自然、体验田园生活的理想选择。">
+    <meta name="keywords" content="乡下农庄,有机蔬菜,散养土鸡,乡村民宿,亲子采摘,田园生活">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-green: #4a7c59;
+            --light-green: #e8f5e9;
+            --accent-orange: #d84315;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-white: #ffffff;
+            --border-color: #e0e0e0;
+            --container-width: 1200px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fafafa;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-orange);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .cta-button {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .cta-button:hover {
+            background-color: #3a6347;
+            color: white;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://picsum.photos/seed/farmhero/1920/800.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-orange);
+            color: white;
+            border: 2px solid var(--accent-orange);
+        }
+
+        .btn-primary:hover {
+            background-color: #bf360c;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--text-dark);
+        }
+
+        /* 特色板块 */
+        .features {
+            padding: 60px 0;
+            background-color: var(--bg-white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-green);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* 农产品展示 */
+        .products {
+            padding: 60px 0;
+            background-color: var(--light-green);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-tag {
+            background-color: var(--primary-green);
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            color: var(--accent-orange);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .buy-link {
+            color: var(--primary-green);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* 休闲旅游 */
+        .leisure {
+            padding: 60px 0;
+        }
+
+        .leisure-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .leisure-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .leisure-image img {
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .leisure-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .leisure-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-green);
+        }
+
+        .leisure-list {
+            margin-bottom: 30px;
+        }
+
+        .leisure-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .check-icon {
+            color: var(--primary-green);
+            margin-right: 12px;
+            margin-top: 4px;
+        }
+
+        .leisure-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .leisure-text p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* 农耕体验 */
+        .experience {
+            padding: 60px 0;
+            background-color: #f0f4f1;
+        }
+
+        .experience-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .step-item {
+            flex: 1;
+            min-width: 150px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 auto 15px;
+        }
+
+        .step-item h4 {
+            margin-bottom: 8px;
+        }
+
+        .step-item p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c3e30;
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .leisure-container {
+                flex-direction: column-reverse;
+            }
+
+            .steps {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2L2,22H22L12,2M12,6L18.5,19H5.5L12,6Z"/></svg>
+                乡下农庄<span>生活</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#products">时令鲜果</a>
+                <a href="#vegetables">有机蔬菜</a>
+                <a href="#poultry">散养禽蛋</a>
+                <a href="#leisure">乡村度假</a>
+                <a href="#contact">联系我们</a>
+            </nav>
+            <a href="#contact" class="cta-button">立即预订</a>
+        </div>
+    </header>
+
+    <!-- Hero 区域 -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>回归自然，品味原生态</h1>
+            <p>远离城市喧嚣，在乡下农庄体验淳朴的田园生活。我们提供从田间到餐桌的全程绿色农产品，以及沉浸式的农耕体验与乡村民宿服务。</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">选购农产</a>
+                <a href="#leisure" class="btn btn-outline">探索体验</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>为什么选择乡下农庄？</h2>
+                <p>坚持传统种植方式，拒绝化学添加剂</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
+                    <h3>原生态种植</h3>
+                    <p>采用传统农耕技术，不使用化肥农药，确保每一颗蔬菜都纯净健康。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🐓</div>
+                    <h3>生态散养</h3>
+                    <p>禽畜在广阔山林间自由活动，食用天然谷物，肉质鲜美，营养丰富。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>产地直发</h3>
+                    <p>减少中间环节，新鲜采摘后立即打包发货，24小时内送达您的餐桌。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3>亲子互动</h3>
+                    <p>开放农场体验区，让孩子亲近自然，学习农业知识，度过有意义的周末。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门农产 -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>当季精选农产</h2>
+                <p>顺应时节，享受大自然的馈赠</p>
+            </div>
+            <div class="product-grid">
+                <!-- 产品 1 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/vegetables/400/300.jpg" alt="有机青菜">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">时令蔬菜</span>
+                        <h3 class="product-title">高山有机青菜</h3>
+                        <p class="product-desc">生长于海拔800米高山，昼夜温差大，口感清脆，富含维生素。</p>
+                        <div class="product-footer">
+                            <span class="price">¥12.00 / 斤</span>
+                            <a href="#" class="buy-link">购买 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 产品 2 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/chicken/400/300.jpg" alt="散养土鸡">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">禽畜肉类</span>
+                        <h3 class="product-title">山林散养土鸡</h3>
+                        <p class="product-desc">每日放养10小时，吃虫草谷，肉质紧实，汤味鲜美。</p>
+                        <div class="product-footer">
+                            <span class="price">¥58.00 / 只</span>
+                            <a href="#" class="buy-link">购买 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 产品 3 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/eggs/400/300.jpg" alt="土鸡蛋">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">禽蛋类</span>
+                        <h3 class="product-title">农家柴鸡蛋</h3>
+                        <p class="product-desc">每只鸡蛋重约60g，蛋黄金黄，蛋黄大，口感细腻。</p>
+                        <div class="product-footer">
+                            <span class="price">¥15.00 / 盒</span>
+                            <a href="#" class="buy-link">购买 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 产品 4 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://picsum.photos/seed/fruit/400/300.jpg" alt="新鲜水果">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">时令水果</span>
+                        <h3 class="product-title">脆甜水蜜桃</h3>
+                        <p class="product-desc">自然成熟，果香浓郁，果肉厚实，甜度高达18度。</p>
+                        <div class="product-footer">
+                            <span class="price">¥18.00 / 斤</span>
+                            <a href="#" class="buy-link">购买 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 乡村休闲 -->
+    <section id="leisure" class="leisure">
+        <div class="container">
+            <div class="leisure-container">
+                <div class="leisure-image">
+                    <img src="https://picsum.photos/seed/farmstay/600/400.jpg" alt="乡村民宿">
+                </div>
+                <div class="leisure-content">
+                    <h3>乡村民宿与休闲体验</h3>
+                    <p style="margin-bottom: 20px; color: var(--text-gray);">除了优质的农产品，我们更致力于打造全方位的乡村度假体验。无论是周末短途游还是长假避暑，这里都是您的理想之选。</p>
+                    
+                    <div class="leisure-list">
+                        <div class="leisure-item">
+                            <div class="check-icon">✓</div>
+                            <div class="leisure-text">
+                                <h4>特色民宿住宿</h4>
+                                <p>改造自百年老屋，保留原始风貌的同时配备现代设施，让您在星空下安然入睡。</p>
+                            </div>
+                        </div>
+                        <div class="leisure-item">
+                            <div class="check-icon">✓</div>
+                            <div class="leisure-text">
+                                <h4>农耕采摘乐趣</h4>
+                                <p>亲手种植番茄、黄瓜等蔬菜，体验丰收的喜悦，并将成果带回家。</p>
+                            </div>
+                        </div>
+                        <div class="leisure-item">
+                            <div class="check-icon">✓</div>
+                            <div class="leisure-text">
+                                <h4>农家特色餐饮</h4>
+                                <p>由农庄大厨掌勺，食材全部来自自家农场，地道农家菜，回味无穷。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary" style="display:inline-block;">查看度假套餐</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 农耕体验流程 -->
+    <section class="experience">
+        <div class="container experience-wrapper">
+            <div class="section-title">
+                <h2>如何参与农耕体验？</h2>
+                <p>简单的三步，开启您的田园之旅</p>
+            </div>
+            <div class="steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h4>在线预约</h4>
+                    <p>选择您感兴趣的项目和时间，通过电话或在线表单预约。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h4>抵达农庄</h4>
+                    <p>导航至乡下农庄，我们在入口处迎接您的到来。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h4>体验收获</h4>
+                    <p>在专业向导的指导下，体验劳作的快乐，带走您的劳动成果。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>乡下农庄</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem; line-height: 1.8;">
+                        致力于推广绿色健康的生活方式，连接城市与乡村的纽带。让更多人了解土地的价值，享受自然的美味。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#products">时令蔬菜</a></li>
+                        <li><a href="#poultry">散养禽蛋</a></li>
+                        <li><a href="#leisure">乡村度假</a></li>
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：contact@xiangxiangfarm.com</li>
+                        <li>地址：XX省XX市XX区绿色农业示范区88号</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem;">获取最新采摘信息和优惠活动。</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 乡下农庄 版权所有. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
