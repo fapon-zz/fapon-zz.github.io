@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嗜谎之神-悬疑推理漫画全集与深度解析</title>
+    <meta name="description" content="本站提供热门悬疑漫画《嗜谎之神》的在线阅读、剧情详细介绍、角色能力解析及角色关系图。深入剖析故事中关于谎言、正义与真相的哲学探讨，为读者提供沉浸式的漫画阅读体验。">
+    <meta name="keywords" content="嗜谎之神, 悬疑漫画, 漫画在线阅读, 角色图鉴, 漫画推荐">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #d4a373;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9"100%">');
+            opacity: 0.1;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 2rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Main Content Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Section Styling */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+        }
+
+        /* Comic Grid */
+        .comic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .comic-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .comic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .comic-cover {
+            height: 240px;
+            overflow: hidden;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .comic-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .comic-card:hover .comic-cover img {
+            transform: scale(1.05);
+        }
+
+        .comic-info {
+            padding: 1rem;
+        }
+
+        .comic-title {
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .comic-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .widget-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .chapter-list li {
+            border-bottom: 1px solid #eee;
+            padding: 0.8rem 0;
+        }
+
+        .chapter-list li:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-list a {
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .chapter-list a:hover {
+            color: var(--accent-color);
+        }
+
+        .chapter-tag {
+            background: #eee;
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Character Section */
+        .character-section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 3rem;
+        }
+
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .char-card {
+            text-align: center;
+        }
+
+        .char-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            border: 3px solid var(--accent-color);
+        }
+
+        .char-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .char-name {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .char-role {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Analysis Content */
+        .analysis-content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 3rem;
+        }
+
+        .analysis-text p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .analysis-text h3 {
+            margin: 2rem 0 1rem;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+        }
+
+        .analysis-text ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .analysis-text li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #888;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+
+            .header-inner {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">嗜谎<span>之神</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#read">在线阅读</a></li>
+                    <li><a href="#characters">角色图鉴</a></li>
+                    <li><a href="#analysis">深度解析</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>谎言是通往真相的阶梯</h1>
+                <p>深入探索悬疑漫画《嗜谎之神》的黑暗世界，见证谎言与正义的博弈。</p>
+                <div class="hero-tags">
+                    <span class="tag">悬疑</span>
+                    <span class="tag">超自然</span>
+                    <span class="tag">智斗</span>
+                    <span class="tag">治愈</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container main-grid">
+            <!-- Left Column: Content -->
+            <div class="content-area">
+                
+                <!-- Intro Section -->
+                <section id="read" class="analysis-content">
+                    <h2 class="section-title">作品简介</h2>
+                    <div class="analysis-text">
+                        <p>《嗜谎之神》是一部由韩国漫画家黄哲勇创作的悬疑推理漫画。故事背景设定在一个看似和平实则暗流涌动的世界，随着神明“谎言之神”的降临，各种超自然能力开始显现。主角李伟德在目睹了世界的崩坏后，觉醒了能够看见他人谎言的能力。在这个充满欺骗与谎言的世界里，他必须利用自己的特殊能力，去寻找那些隐藏在黑暗中的真相。</p>
+                        <p>作品不仅有着紧凑的剧情节奏和烧脑的推理情节，更深刻探讨了谎言的本质、人性的复杂以及在绝望中寻找希望的主题。每一话都像是一个独立的小故事，层层递进，最终汇聚成宏大的世界观。</p>
+                    </div>
+                </section>
+
+                <!-- Characters Section -->
+                <section id="characters">
+                    <h2 class="section-title">主要角色</h2>
+                    <div class="character-section">
+                        <div class="char-grid">
+                            <div class="char-card">
+                                <div class="char-avatar">
+                                    <img src="https://picsum.photos/seed/lee/200/200" alt="李伟德">
+                                </div>
+                                <div class="char-name">李伟德</div>
+                                <div class="char-role">主角 / 谎言之神</div>
+                            </div>
+                            <div class="char-card">
+                                <div class="char-avatar">
+                                    <img src="https://picsum.photos/seed/anna/200/200" alt="安娜">
+                                </div>
+                                <div class="char-name">安娜</div>
+                                <div class="char-role">女主角 / 魔法少女</div>
+                            </div>
+                            <div class="char-card">
+                                <div class="char-avatar">
+                                    <img src="https://picsum.photos/seed/joker/200/200" alt="反派">
+                                </div>
+                                <div class="char-name">神秘反派</div>
+                                <div class="char-role">幕后黑手 / 操控者</div>
+                            </div>
+                            <div class="char-card">
+                                <div class="char-avatar">
+                                    <img src="https://picsum.photos/seed/doctor/200/200" alt="医生">
+                                </div>
+                                <div class="char-name">朴医生</div>
+                                <div class="char-role">心理医生 / 智囊</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Latest Chapters -->
+                <section>
+                    <h2 class="section-title">最新更新</h2>
+                    <div class="comic-grid">
+                        <article class="comic-card">
+                            <div class="comic-cover">
+                                <img src="https://picsum.photos/seed/ch1/300/400" alt="第1话">
+                            </div>
+                            <div class="comic-info">
+                                <div class="comic-title">第1话：谎言的诞生</div>
+                                <div class="comic-meta">
+                                    <span>更新于 2小时前</span>
+                                    <span class="chapter-tag">热门</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="comic-card">
+                            <div class="comic-cover">
+                                <img src="https://picsum.photos/seed/ch2/300/400" alt="第2话">
+                            </div>
+                            <div class="comic-info">
+                                <div class="comic-title">第2话：觉醒的瞬间</div>
+                                <div class="comic-meta">
+                                    <span>更新于 1天前</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="comic-card">
+                            <div class="comic-cover">
+                                <img src="https://picsum.photos/seed/ch3/300/400" alt="第3话">
+                            </div>
+                            <div class="comic-info">
+                                <div class="comic-title">第3话：看不见的敌人</div>
+                                <div class="comic-meta">
+                                    <span>更新于 3天前</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="comic-card">
+                            <div class="comic-cover">
+                                <img src="https://picsum.photos/seed/ch4/300/400" alt="第4话">
+                            </div>
+                            <div class="comic-info">
+                                <div class="comic-title">第4话：信任的代价</div>
+                                <div class="comic-meta">
+                                    <span>更新于 5天前</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+                <!-- Ranking Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门榜单</h3>
+                    <ul class="chapter-list">
+                        <li><a href="#">第10话：神明的低语 <span class="chapter-tag">HOT</span></a></li>
+                        <li><a href="#">第9话：破碎的记忆</a></li>
+                        <li><a href="#">第8话：无法直视的真相</a></li>
+                        <li><a href="#">第7话：新的伙伴</a></li>
+                        <li><a href="#">第6话：谎言的代价</a></li>
+                        <li><a href="#">第5话：初次交锋</a></li>
+                    </ul>
+                </div>
+
+                <!-- Info Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">作品数据</h3>
+                    <div style="font-size: 0.9rem; color: #555;">
+                        <p><strong>作者：</strong> 黄哲勇</p>
+                        <p><strong>连载状态：</strong> 连载中</p>
+                        <p><strong>人气指数：</strong> 9.8/10</p>
+                        <p><strong>类型：</strong> 悬疑 / 冒险 / 奇幻</p>
+                        <p><strong>评分：</strong> 9.5/10</p>
+                    </div>
+                </div>
+
+                <!-- Ads Placeholder -->
+                <div class="sidebar-widget" style="background: #e0e0e0; display: flex; align-items: center; justify-content: center; height: 250px; color: #888;">
+                    广告位
+                </div>
+            </aside>
+        </div>
+
+        <!-- Deep Analysis Section -->
+        <section id="analysis" class="container" style="margin-bottom: 3rem;">
+            <h2 class="section-title">深度解析</h2>
+            <div class="analysis-content">
+                <div class="analysis-text">
+                    <h3>关于“谎言”的哲学探讨</h3>
+                    <p>在《嗜谎之神》中，谎言不仅仅是欺骗的手段，更是一种生存的武器。故事通过主角的视角，展现了当一个人能够看穿所有谎言时，世界会变得多么令人窒息。作者巧妙地利用了这一设定，探讨了信任的脆弱性以及建立真实连接的困难。</p>
+                    
+                    <h3>角色能力的设定逻辑</h3>
+                    <p>李伟德的能力“看穿谎言”在初期看似强大，实则充满了副作用。每一次使用能力，都会消耗主角的精神力甚至改变现实。这种设定让战斗不仅仅是力量的比拼，更是意志和智慧的较量。反派的谎言往往比主角的更具欺骗性，因为它们往往披着“善意”的外衣。</p>
+                    
+                    <h3>剧情推进的策略</h3>
+                    <p>漫画采用了单元剧与主线交织的叙事方式。每一话解决一个局部的小谜题，同时暗示更大的阴谋。这种结构既保证了阅读的爽快感，又维持了长篇连载的张力。读者在跟随主角解谜的过程中，也会逐渐拼凑出这个世界背后的真相。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col" style="flex: 2; min-width: 300px;">
+                    <h4>嗜谎之神漫画站</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        致力于提供最优质的悬疑漫画阅读体验。我们尊重版权，所有内容仅供个人学习交流使用。<br>
+                        如果您喜欢本站，请推荐给您的朋友。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">排行榜</a></li>
+                        <li><a href="#">最新更新</a></li>
+                        <li><a href="#">全部分类</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">作者主页</a></li>
+                        <li><a href="#">漫画论坛</a></li>
+                        <li><a href="#">投稿建议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 嗜谎之神漫画站. All Rights Reserved. 本站为演示页面，非官方站点。
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
