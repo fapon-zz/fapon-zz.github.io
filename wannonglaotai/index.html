@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玩弄老太婆BBW视频-中老年丰满女性生活记录与内容分享平台</title>
+    <meta name="description" content="本平台专注于分享中老年丰满女性（BBW）的生活记录、情感故事与健康养生内容。提供真实、尊重的社区交流环境，探讨成熟魅力与生活智慧。">
+    <meta name="keywords" content="玩弄老太婆BBW视频,中老年丰满女性,成熟魅力,生活记录,健康养生,社区分享">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8E44AD;
+            --secondary-color: #2C3E50;
+            --accent-color: #E67E22;
+            --bg-color: #FDFBF7;
+            --card-bg: #FFFFFF;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-radius: 12px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--secondary-color);
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: #f0f0f0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            width: 300px;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            margin-left: 8px;
+            color: var(--text-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), #9B59B6);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-btn {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.4);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            padding-bottom: 60px;
+        }
+
+        /* Content Section */
+        .content-area h2 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 16px;
+            color: var(--secondary-color);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 3rem;
+        }
+
+        .duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .card-info {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            color: var(--secondary-color);
+        }
+
+        .category-list li {
+            margin-bottom: 10px;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-color);
+            font-size: 0.95rem;
+        }
+
+        .category-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .category-list span {
+            background: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .ad-placeholder {
+            width: 100%;
+            height: 250px;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 0.9rem;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ecf0f1;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #95a5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                <span>成熟视界</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">分类</a></li>
+                    <li><a href="#">热门榜单</a></li>
+                    <li><a href="#">社区讨论</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索内容...">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>发现成熟魅力，记录真实生活</h1>
+        <p>在这里，我们尊重每一位中老年女性的生活记录与真实表达。分享健康、情感与生活智慧，构建温暖的社区氛围。</p>
+        <a href="#" class="hero-btn">开始浏览</a>
+    </section>
+
+    <div class="container">
+        <main class="content-area">
+            <h2>热门内容推荐</h2>
+            <div class="video-grid">
+                <!-- Card 1 -->
+                <article class="video-card">
+                    <div class="thumbnail">
+                        <span>▶</span>
+                        <span class="duration">12:34</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">中老年瑜伽养生指南：舒缓身心，保持活力</h3>
+                        <div class="card-meta">
+                            <span>健康生活</span>
+                            <span>2.3万次播放</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="video-card">
+                    <div class="thumbnail">
+                        <span>▶</span>
+                        <span class="duration">08:45</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">丰满女性穿搭技巧：如何穿出自信与优雅</h3>
+                        <div class="card-meta">
+                            <span>时尚穿搭</span>
+                            <span>1.8万次播放</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="video-card">
+                    <div class="thumbnail">
+                        <span>▶</span>
+                        <span class="duration">15:20</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">夕阳红广场舞大赛精彩集锦</h3>
+                        <div class="card-meta">
+                            <span>休闲娱乐</span>
+                            <span>5.1万次播放</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="video-card">
+                    <div class="thumbnail">
+                        <span>▶</span>
+                        <span class="duration">10:05</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">家庭烹饪：家常菜谱分享与烹饪心得</h3>
+                        <div class="card-meta">
+                            <span>美食烹饪</span>
+                            <span>9千次播放</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="video-card">
+                    <div class="thumbnail">
+                        <span>▶</span>
+                        <span class="duration">22:10</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">老年旅游攻略：享受世界，不留遗憾</h3>
+                        <div class="card-meta">
+                            <span>旅游攻略</span>
+                            <span>3.4万次播放</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="video-card">
+                    <div class="thumbnail">
+                        <span>▶</span>
+                        <span class="duration">06:50</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">退休后的生活规划与理财建议</h3>
+                        <div class="card-meta">
+                            <span>理财资讯</span>
+                            <span>1.2万次播放</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <aside>
+            <div class="sidebar-widget">
+                <h3 class="widget-title">内容分类</h3>
+                <ul class="category-list">
+                    <li><a href="#">健康养生 <span>120</span></a></li>
+                    <li><a href="#">时尚穿搭 <span>85</span></a></li>
+                    <li><a href="#">广场舞教学 <span>200</span></a></li>
+                    <li><a href="#">烹饪美食 <span>65</span></a></li>
+                    <li><a href="#">旅游游记 <span>45</span></a></li>
+                    <li><a href="#">情感交流 <span>90</span></a></li>
+                    <li><a href="#">生活百科 <span>110</span></a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="widget-title">热门标签</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <a href="#" style="background:#f0f0f0; padding:4px 10px; border-radius:15px; font-size:0.85rem;">#广场舞</a>
+                    <a href="#" style="background:#f0f0f0; padding:4px 10px; border-radius:15px; font-size:0.85rem;">#旗袍</a>
+                    <a href="#" style="background:#f0f0f0; padding:4px 10px; border-radius:15px; font-size:0.85rem;">#养生</a>
+                    <a href="#" style="background:#f0f0f0; padding:4px 10px; border-radius:15px; font-size:0.85rem;">#广场舞</a>
+                    <a href="#" style="background:#f0f0f0; padding:4px 10px; border-radius:15px; font-size:0.85rem;">#旅游</a>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="widget-title">广告位</h3>
+                <div class="ad-placeholder">
+                    联系我们<br>获取更多合作机会
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="font-size: 0.9rem; color: #bdc3c7; line-height: 1.6;">
+                    成熟视界致力于为中老年群体提供丰富的生活资讯、娱乐内容及社区交流平台。我们尊重每一位用户，倡导积极健康的生活方式。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">用户协议</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">加入我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系支持</h4>
+                <ul>
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">意见反馈</a></li>
+                    <li><a href="#">举报中心</a></li>
+                    <li><a href="#">商务合作</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 成熟视界社区. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
