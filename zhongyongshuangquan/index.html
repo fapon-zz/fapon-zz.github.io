@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>忠勇双全的生肖 - 传统生肖文化与性格解析</title>
+    <meta name="description" content="深入解析忠勇双全的生肖文化内涵，探讨十二生肖中代表忠诚与勇气的动物象征意义，提供生肖性格分析与运势解读。">
+    <meta name="keywords" content="忠勇双全的生肖,生肖文化,生肖性格,十二生肖,忠诚生肖,勇敢生肖">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --bg-color: #FDF5E6;
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #E0D0B0;
+            --shadow: 0 4px 12px rgba(139, 69, 19, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to bottom, #5D4037, #8B4513);
+            color: #fff;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #FFD700;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://picsum.photos/seed/tiger/1920/600') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            border: 2px solid transparent;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            border-color: #fff;
+        }
+
+        /* Main Content */
+        main {
+            padding-bottom: 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0;
+        }
+
+        /* Concept Section */
+        .concept-section {
+            padding: 2rem 0;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .concept-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        /* Animal Grid */
+        .animal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .animal-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .animal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.2);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-body h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: #FFF8E1;
+            color: var(--secondary-color);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .card-stats {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            background-color: #fff;
+            padding: 3rem 0;
+            margin-top: 2rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #FAFAFA;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #F5F5DC;
+        }
+
+        .comparison-table td.highlight {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .faq-item {
+            background: #fff;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: #FDF5E6;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-light);
+            background-color: #FAFAFA;
+        }
+
+        .faq-answer.open {
+            padding: 1.2rem;
+            max-height: 500px; /* Arbitrary large height */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #5D4037;
+            color: #fff;
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .footer-content p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 10px;
+                font-size: 0.9rem;
+            }
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">十二生肖<span>文化</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#concept">文化内涵</a></li>
+                    <li><a href="#list">生肖解析</a></li>
+                    <li><a href="#comparison">对比分析</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>忠勇双全的生肖</h1>
+            <p>探索传统文化中代表忠诚、勇敢与正义的生肖象征，解读十二生肖中性格刚毅、重情重义的性格特质。</p>
+            <a href="#list" class="btn">查看详细解析</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Concept Section -->
+        <section id="concept" class="concept-section">
+            <div class="section-title">
+                <h2>什么是“忠勇双全”</h2>
+            </div>
+            <p class="concept-text">
+                在中国传统文化与生肖命理学中，“忠勇双全”是极高的道德评价。它不仅指代生肖动物本身的习性（如老虎的勇猛、狗的忠诚），也常被用来形容属相为某些特定生肖的人。他们通常性格刚毅，在面对困难时敢于担当，在人际交往中信守承诺。本文将深入分析哪些生肖最符合这一特质。
+            </p>
+        </section>
+
+        <!-- Animal List Section -->
+        <section id="list">
+            <div class="section-title">
+                <h2>生肖性格解析</h2>
+            </div>
+            <div class="animal-grid">
+                
+                <!-- Tiger Card -->
+                <article class="animal-card">
+                    <img src="https://picsum.photos/seed/tiger/400/300" alt="生肖虎" class="card-img">
+                    <div class="card-body">
+                        <span class="tag">生肖虎</span>
+                        <h3>虎：山林之王</h3>
+                        <p class="card-desc">虎象征着威严与勇气。属虎的人天生具有领袖气质，敢作敢当，不畏强权，是“忠勇”最直接的化身。</p>
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">勇</span>
+                                <span class="stat-label">无畏</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">义</span>
+                                <span class="stat-label">讲义气</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Horse Card -->
+                <article class="animal-card">
+                    <img src="https://picsum.photos/seed/horse/400/300" alt="生肖马" class="card-img">
+                    <div class="card-body">
+                        <span class="tag">生肖马</span>
+                        <h3>马：千里驰骋</h3>
+                        <p class="card-desc">马象征着奔放与忠诚。在古代战争中，马是忠诚的伙伴。属马的人热情直爽，对朋友肝胆相照，执行力强。</p>
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">诚</span>
+                                <span class="stat-label">真诚</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">进</span>
+                                <span class="stat-label">进取</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dog Card -->
+                <article class="animal-card">
+                    <img src="https://picsum.photos/seed/dog/400/300" alt="生肖狗" class="card-img">
+                    <div class="card-body">
+                        <span class="tag">生肖狗</span>
+                        <h3>狗：忠诚卫士</h3>
+                        <p class="card-desc">狗是“忠”字的绝对代表。属狗的人正直善良，原则性强，为了守护家人和正义不惜牺牲自己，是典型的忠勇之士。</p>
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">忠</span>
+                                <span class="stat-label">忠诚</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">正</span>
+                                <span class="stat-label">正直</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dragon Card -->
+                <article class="animal-card">
+                    <img src="https://picsum.photos/seed/dragon/400/300" alt="生肖龙" class="card-img">
+                    <div class="card-body">
+                        <span class="tag">生肖龙</span>
+                        <h3>龙：正义化身</h3>
+                        <p class="card-desc">龙集万物之长，象征着正义与力量。属龙的人气宇轩昂，富有正义感，敢于维护公平，在关键时刻总能挺身而出。</p>
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">正</span>
+                                <span class="stat-label">正气</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">刚</span>
+                                <span class="stat-label">刚强</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Comparison Table Section -->
+        <section id="comparison" class="comparison-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>忠勇特质对比</h2>
+                </div>
+                <p style="text-align: center; color: #666; margin-bottom: 20px;">不同生肖在“忠”与“勇”方面的表现侧重不同</p>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>生肖</th>
+                            <th>核心特质</th>
+                            <th>忠的表现</th>
+                            <th>勇的表现</th>
+                            <th>适用场景</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>虎</strong></td>
+                            <td>威猛果敢</td>
+                            <td>护短，对认可的人极忠诚</td>
+                            <td>敢于挑战权威，冲锋陷阵</td>
+                            <td>危机处理、领导岗位</td>
+                        </tr>
+                        <tr>
+                            <td><strong>马</strong></td>
+                            <td>奔放直率</td>
+                            <td>一诺千金，不背叛朋友</td>
+                            <td>敢于开拓新领域，不畏未知</td>
+                            <td>创业、冒险、团队协作</td>
+                        </tr>
+                        <tr>
+                            <td><strong>狗</strong></td>
+                            <td>稳重可靠</td>
+                            <td>绝对的忠诚，守口如瓶</td>
+                            <td>坚守原则，不随波逐流</td>
+                            <td>安保、法律、行政工作</td>
+                        </tr>
+                        <tr>
+                            <td><strong>龙</strong></td>
+                            <td>霸气外露</td>
+                            <td>维护集体荣誉，大义凛然</td>
+                            <td>敢于担当重任，力挽狂澜</td>
+                            <td>战略规划、高层管理</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">属虎的人一定很勇敢吗？</div>
+                <div class="faq-answer">
+                    <p>属虎的人天生具有冒险精神和勇气，但这并不意味着他们没有恐惧。真正的忠勇是在面对恐惧时依然选择坚持正义和责任。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">如何培养生肖中的“忠勇”精神？</div>
+                <div class="faq-answer">
+                    <p>无论属相如何，忠勇精神都可以通过后天培养。建议多阅读历史人物传记，学习他们的担当精神；在人际交往中，信守承诺，坚守底线。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">“忠勇双全”与“刚毅木讷”有冲突吗？</div>
+                <div class="faq-answer">
+                    <p>在传统文化中，孔子认为“刚毅木讷近仁”。忠勇的人往往不善言辞，行动多于表达。这种朴实无华正是忠勇精神最坚实的体现。</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>传承中华传统文化，解析十二生肖性格奥秘。</p>
+            <p>关注生肖运势，了解自我，拥抱生活。</p>
+            <div class="copyright">
+                &copy; 2023 十二生肖文化研究 | 仅供文化科普与参考
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 手风琴效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isOpen = answer.classList.contains('open');
+
+                    // 关闭所有其他的答案
+                    document.querySelectorAll('.faq-answer').forEach(item => {
+                        item.classList.remove('open');
+                    });
+                    document.querySelectorAll('.faq-question::after').forEach(item => {
+                        item.textContent = '+';
+                    });
+
+                    // 如果点击的不是已经打开的，则打开它
+                    if (!isOpen) {
+                        answer.classList.add('open');
+                        question.style.color = 'var(--secondary-color)';
+                    } else {
+                        question.style.color = 'var(--text-main)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
